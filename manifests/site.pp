@@ -25,7 +25,11 @@ File { backup => false }
 #
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
 node default {
-  # This is where you can declare classes for all nodes.
-  # Example:
-  #   class { 'my_class': }
+  include 'puppet_status_check'
+}
+
+node 'osp-primary.garrett.rowell' {
+  class { 'puppet_status_check':
+    role => 'primary',
+  }
 }
