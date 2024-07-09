@@ -29,7 +29,7 @@ node default {
 }
 
 node 'osp-primary.garrett.rowell' {
-  class { 'puppet_status_check':
+  #class { 'puppet_status_check':
     #role => 'primary',
-  }
+  #}
 }
