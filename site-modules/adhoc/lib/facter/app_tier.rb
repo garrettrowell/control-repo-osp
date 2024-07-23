@@ -3,14 +3,16 @@ Facter.add(:app_tier) do
     hostname = 'something-01'
 #    hostname = Facter.value('networking.hostname')
     case hostname
-    when /^.*\D2.*/
-      'test'
-    when /^.*\D1.*/
-      'stage'
-    when /^.*\D4.*/
-      'sandbox'
     when /^.*\D0.*/
       'production'
+    when /^.*\D1.*/
+      'stage'
+    when /^.*\D2.*/
+      'test'
+    when /^.*\D3.*/
+      'dev'
+    when /^.*\D4.*/
+      'sandbox'
     else
       nil
     end
