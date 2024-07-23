@@ -1,6 +1,6 @@
 Facter.add(:app_tier) do
   setcode do
-    certname = Facter.value('certname')
+    certname = Facter.value('networking.hostname')
     certname
   end
 end
