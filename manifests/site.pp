@@ -25,11 +25,12 @@ File { backup => false }
 #
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
 node default {
-  include 'puppet_status_check'
+  #  include 'puppet_status_check'
+  notify { "somepass: ${lookup('somepass')}": }
 }
 
-node 'osp-primary.garrett.rowell' {
-  class { 'puppet_status_check':
-    role => 'primary',
-  }
-}
+#node 'osp-primary.garrett.rowell' {
+#  class { 'puppet_status_check':
+#    role => 'primary',
+#  }
+#}
