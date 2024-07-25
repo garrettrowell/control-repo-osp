@@ -26,7 +26,8 @@ File { backup => false }
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
 node default {
   #  include 'puppet_status_check'
-  notify { "somepass: ${lookup('somepass')}": }
+  $somepass = lookup('mymodule::somepass')
+  notify { "somepass: ${somepass}": }
 }
 
 #node 'osp-primary.garrett.rowell' {
