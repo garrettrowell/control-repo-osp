@@ -2,5 +2,5 @@
 mymodule::somepass: ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAl6tTjb8aJqPHE/AsfJUklb6YnIo7lzJNuraWYqQv7NfLTiACD6e7f913OdWhGNTvxvJKNIizZW1XGhCvgMfL5hFR+cFftLE9VGa/6EMF+iE76bTQ4V7urCJOWon9/uiul5cRj2Y+T66ItUakdOgGGQBZnn3392gqCNb4jTFNjsH08FFbaL44uRt8EQsnVyX2robMicJbqMlF7fWDZWzV519Dzxme2immO4vxxAlSY1crhXZ3QkpxHzh8RpO2l24nrCya2tKRZr8GIc9CYaEavXEtisziReI/hjLpWej3OZhAEPSLzupRn7CckNg4aD+jibJUyhgWzd0Y3tuLObZBnjA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBA9YBP3iZ0iafSr6enm4I5dgBCyG5fE2ooG1+os56txCiqB]
 
 lookup_options:
-  '^mymodule::.*pass.*':
+  '^.*::.*pass.*':
     convert_to: 'Sensitive'
