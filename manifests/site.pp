@@ -28,6 +28,10 @@ node default {
   #  include 'puppet_status_check'
   $somepass = lookup('mymodule::somepass')
   notify { "somepass: ${somepass}": }
+  file { '/tmp/testing':
+    ensure  => file,
+    content => $somepass,
+  }
 }
 
 #node 'osp-primary.garrett.rowell' {
