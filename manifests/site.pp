@@ -39,8 +39,9 @@ node default {
   notify { "somepass.unwrap: ${somepass.unwrap}": }
 
   file { '/tmp/testing':
-    ensure  => file,
-    content => $somepass,
+    ensure    => file,
+    content   => $somepass.unwrap,
+    show_diff => false,
   }
 }
 
