@@ -36,7 +36,7 @@ node default {
   $somepass = lookup('mymodule::somepass')
 
   notify { "somepass: ${somepass}": }
-  notify { "somepass unwrap: ${somepass.unwrap}": }
+  notify { "somepass.unwrap: ${somepass.unwrap}": }
 
   file { '/tmp/testing':
     ensure  => file,
