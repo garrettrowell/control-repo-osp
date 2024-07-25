@@ -27,7 +27,10 @@ File { backup => false }
 node default {
   #  include 'puppet_status_check'
   $somepass = lookup('mymodule::somepass')
+
   notify { "somepass: ${somepass}": }
+  notify { "somepass unwrap: ${somepass.unwrap}": }
+
   file { '/tmp/testing':
     ensure  => file,
     content => $somepass,
