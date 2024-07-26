@@ -15,6 +15,7 @@ plan adhoc::ex_plan (
   # run this only on successful targets
   run_task('adhoc::example', $result.ok_set.targets, '_catch_errors' => true, 'message' => 'second task')
 
+  # apply ad-hoc puppet resources
   apply_prep($result.ok_set.targets)
   apply($result.ok_set.targets) {
     file { '/tmp/bolt_ex':
@@ -22,4 +23,8 @@ plan adhoc::ex_plan (
       content => $facts['networking']['hostname']
     }
   }
+
+  # run a command
+  run_command("echo 'hello from cli'", $result.ok_set.targets)
+
 }
