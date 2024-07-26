@@ -1,8 +1,7 @@
 plan adhoc::ex_plan (
-  String $targets,
+  TargetSpec $targets,
 ) {
-  $_targets = get_targets($targets)
-  $result_or_error = run_task('adhoc::example', '_catch_errors' => true, $_targets)
+  $result_or_error = run_task('adhoc::example', $targets, '_catch_errors' => true)
 
   $result = case $result_or_error {
     # When the plan returned a ResultSet use it.
