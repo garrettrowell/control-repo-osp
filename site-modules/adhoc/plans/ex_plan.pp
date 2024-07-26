@@ -13,5 +13,5 @@ plan adhoc::ex_plan (
   }
 
   # run this only on successful targets
-  run_task('adhoc::example', '_catch_errors' => true, $result.ok_set)
+  run_task('adhoc::example', $result.ok_set, '_catch_errors' => true)
 }
