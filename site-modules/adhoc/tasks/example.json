@@ -1,0 +1,14 @@
+{
+  "description": "Output a message",
+  "input_method": "stdin",
+  "parameters": {
+    "message": {
+      "description": "the message to output",
+      "type": "Optional[Pattern[/^[^|&]*$/]]"
+    }
+  },
+  "implementations": [
+    { "name": "nix_example.sh", "requirements": ["shell"], "input_method": "environment" },
+    { "name": "win_example.ps1", "requirements": ["powershell"], "input_method": "powershell" }
+  ]
+}

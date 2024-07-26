@@ -1,4 +1,11 @@
 {
-    "description": "This is the description for the win_example task",
-    "input_method": "powershell"
+  "description": "Outputs a message",
+  "private": true,
+  "input_method": "powershell",
+  "parameters": {
+    "message": {
+      "description": "Output a message",
+      "type": "Optional[Pattern[/^[^|&]*$/]]"
+    }
+  }
 }

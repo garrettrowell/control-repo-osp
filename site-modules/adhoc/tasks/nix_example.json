@@ -1,4 +1,11 @@
 {
-    "description": "This is the description for the nix_example task",
-    "input_method": "environment"
+  "description": "output a message",
+  "private": true,
+  "input_method": "environment",
+  "parameters": {
+    "message": {
+      "description": "the message to print",
+      "type": "Optional[Pattern[/^[^|&]*$/]]"
+    }
+  }
 }

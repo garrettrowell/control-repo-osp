@@ -1,3 +1,3 @@
 #!/bin/bash
 
-# task content goes here
+echo $PT_message

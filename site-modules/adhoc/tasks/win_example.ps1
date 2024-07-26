@@ -1,1 +1,6 @@
-# task content goes here
+[CmdletBinding()]
+Param(
+  [String]$message = "",
+)
+
+Write-Output $message
