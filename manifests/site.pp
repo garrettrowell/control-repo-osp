@@ -49,8 +49,8 @@ node 'osp-primary.garrett.rowell' {
   class { 'puppet_status_check':
     role                 => 'primary',
     indicator_exclusions => [
-      'S0007', 'S0011', 'S0010',
-      'S0011', 'S0027', 'S0029'
+      'S0007', 'S0011', 'S0010', 'S0011',
+      'S0017', 'S0027', 'S0029'
     ],
   }
 }
