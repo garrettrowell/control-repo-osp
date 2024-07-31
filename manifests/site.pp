@@ -33,20 +33,20 @@ node default {
   # ) {
   #   ...
   # }
-  $somepass = lookup('mymodule::somepass')
+  #$somepass = lookup('mymodule::somepass')
 
-  notify { "somepass: ${somepass}": }
-  notify { "somepass.unwrap: ${somepass.unwrap}": }
+  #notify { "somepass: ${somepass}": }
+  #notify { "somepass.unwrap: ${somepass.unwrap}": }
 
-  file { '/tmp/testing':
-    ensure    => file,
-    content   => $somepass.unwrap,
-    show_diff => false,
-  }
+  #file { '/tmp/testing':
+  #  ensure    => file,
+  #  content   => $somepass.unwrap,
+  #  show_diff => false,
+  #}
 }
 
-#node 'osp-primary.garrett.rowell' {
-#  class { 'puppet_status_check':
-#    role => 'primary',
-#  }
-#}
+node 'osp-primary.garrett.rowell' {
+  class { 'puppet_status_check':
+    role => 'primary',
+  }
+}
