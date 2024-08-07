@@ -1,8 +1,10 @@
 forge 'https://forge.puppet.com'
 
-mod 'puppetlabs-puppet_status_check',
-  :git    => 'git@github.com:garrettrowell/puppetlabs-puppet_status_check.git',
-  :branch =>'feature_fact_indicator_exclusion'
+#mod 'puppetlabs-puppet_status_check',
+#  :git    => 'git@github.com:garrettrowell/puppetlabs-puppet_status_check.git',
+#  :branch =>'feature_fact_indicator_exclusion'
+
+mod 'puppetlabs-puppet_status_check', '0.9.3'
 
 mod 'theforeman-puppet', '19.2.0'
 mod 'puppetlabs-puppetdb', '8.1.0'
